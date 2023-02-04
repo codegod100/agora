@@ -1,0 +1,13 @@
+services:
+  agora-server:
+    image: moonlion/agora-server
+    ports: 
+      - 5017:5017
+    volumes:
+      - data:/home/root/agora
+  agora-bridge:
+    image: moonlion/agora-bridge
+    volumes:
+      - data:/agora-bridge
+volumes:
+  data:
